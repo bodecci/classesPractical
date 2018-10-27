@@ -1,4 +1,4 @@
-
+let deck = [];
 
 class Card {
   constructor(number, suit){
@@ -20,6 +20,26 @@ class Card {
   }//end flip method
 };//end Card
 
- let card0 = new Card(6, 'Clubs');
- let card1 = new Card(1, 'Spades');
- let card2 = new Card(3, 'Hearts');
+function createDeck(){
+  for (let i=0; i<4; i++){
+    let suit = 'Hearts';
+    if(i === 1){
+      suit = 'Spades';
+    }//end if Spades
+    else if(i === 2){
+      suit = 'Clubs';
+    }//end else if Clubs
+    else if (i === 3) {
+      suit = 'Diamonds';
+    }//end else if Diamonds
+    for(let j=0; j<13; j++){
+      deck.push(new Card(j+1, suit) );
+    }//end card loop
+  }//end suit loop
+}//end createDeck
+
+createDeck();
+
+function drawCard(){
+
+}//end drawCard
