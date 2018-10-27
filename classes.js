@@ -41,5 +41,19 @@ function createDeck(){
 createDeck();
 
 function drawCard(){
-
+  return deck[ Math.floor(Math.random()* 52) ];
 }//end drawCard
+
+function handOfCards( numberOfCards){
+  console.log('in handOfCards: ', numberOfCards);
+  let hand = [];
+  for(let i=0; i<numberOfCards; i++){
+    hand.push( drawCard());
+  }//end for loop
+  console.log('hand drawn: ', hand);
+  return hand;
+}//end handOfCards
+
+handOfCards(5);
+handOfCards(5);
+handOfCards(5);
